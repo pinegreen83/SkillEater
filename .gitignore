@@ -1,12 +1,12 @@
-# macOS 관련 파일
+############################
+# macOS
+############################
 .DS_Store
 
-# Visual Studio 2015 및 Xcode 관련 사용자/프로젝트 파일
+############################
+# IDE / Editor
+############################
 .vs/
-*.xcodeproj
-*.xcworkspace
-*.xcuserdata
-*.xcuserstate
 *.sln
 *.suo
 *.opensdf
@@ -14,59 +14,82 @@
 *.VC.db
 *.VC.opendb
 
-# 컴파일된 오브젝트 및 바이너리 파일들
-*.slo
-*.lo
+*.xcodeproj
+*.xcworkspace
+*.xcuserdata
+*.xcuserstate
+
+############################
+# Compiled / Binary
+############################
 *.o
 *.obj
-
-# Precompiled Headers
+*.lo
+*.slo
 *.gch
 *.pch
-
-# 컴파일된 동적/정적 라이브러리
 *.so
 *.dylib
 *.dll
-*.lai
-*.la
 *.a
 *.lib
-
-# 실행 파일들
 *.exe
 *.out
 *.app
 *.ipa
 
-# 엔진이 생성할 수 있는 프로젝트 관련 파일 (예: Xcode, Visual Studio)
-# (이미 SourceArt 폴더를 사용한다면 아래 항목도 필요)
-SourceArt/**/*.png
-SourceArt/**/*.tga
+############################
+# Unreal Engine generated
+############################
 
-# 빌드 산출물
-Binaries/*
-Plugins/*/Binaries/*
+# Binaries
+SkillEater/Binaries/
+SkillEater/Plugins/*/Binaries/
 
-# 빌드 디렉터리 (일부 파일은 예외 처리)
-Build/*
-!Build/*/
-Build/*/**
-!Build/*/PakBlacklist*.txt
-!Build/**/*.ico
+# Intermediate
+SkillEater/Intermediate/
+SkillEater/Plugins/*/Intermediate/
 
-# 맵 빌드 데이터
+# Saved (logs, autosave, local settings)
+SkillEater/Saved/
+
+# Derived data
+DerivedDataCache/
+
+############################
+# Build (부분 허용)
+############################
+SkillEater/Build/*
+!SkillEater/Build/*/
+SkillEater/Build/**/*
+!SkillEater/Build/*/PakBlacklist*.txt
+!SkillEater/Build/**/*.ico
+
+############################
+# Content policy
+############################
+
+# 대용량 그래픽 에셋 전용 폴더 (완전 제외)
+SkillEater/Content/Assets/**
+
+# 나머지 Content는 커밋 (BP / Data / Map 등)
+!SkillEater/Content/Blueprints/**
+!SkillEater/Content/Input/**
+!SkillEater/Content/Maps/**
+
+# Unreal World Partition generated
+SkillEater/Content/**/__ExternalActors__/**
+SkillEater/Content/**/__ExternalObjects__/**
+
+############################
+# Unreal project essentials
+############################
+!SkillEater/*.uproject
+!SkillEater/Source/**
+!SkillEater/Config/**
+!SkillEater/Plugins/**/Source/**
+!SkillEater/Plugins/**/Content/**
+!SkillEater/Plugins/**/Config/**
+
+# Map build data
 *_BuiltData.uasset
-
-# 에디터가 생성한 설정 및 캐시 파일들
-Saved/*
-Intermediate/*
-Plugins/*/Intermediate/*
-DerivedDataCache/*
-
-# 리소스 파일은 무시 (예: 이미지 등)
-Content/*
-
-# 프로젝트 파일과 코드 추적 (필요한 항목만 커밋)
-!*.uproject
-!Source/
